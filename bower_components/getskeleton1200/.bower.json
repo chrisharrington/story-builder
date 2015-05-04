@@ -1,0 +1,14 @@
+{
+  "name": "getskeleton1200",
+  "homepage": "https://github.com/polikin/GetSkeleton1200",
+  "_release": "a99bf6f539",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "a99bf6f5397e01ab8ad62ad2d4e600ea7993bedf"
+  },
+  "_source": "git://github.com/polikin/GetSkeleton1200.git",
+  "_target": "*",
+  "_originalSource": "getskeleton1200",
+  "_direct": true
+}
