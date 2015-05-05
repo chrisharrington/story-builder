@@ -15,6 +15,7 @@ polikin.ca
 
 */
 
+
 /* Table of Contents
 ==================================================
     #Base 960 Grid
@@ -24,7 +25,7 @@ polikin.ca
     #Clearing */
 
 .columns, 
-.column { 
+.column { 	
 	-webkit-transition: all 0.2s ease;
 	  -moz-transition: all 0.2s ease;
 	  -moz-transition: all 0.2s ease;

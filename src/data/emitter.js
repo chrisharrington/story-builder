@@ -1,0 +1,1 @@
+var emitter = require("eventEmitter");

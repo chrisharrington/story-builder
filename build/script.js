@@ -1,6 +1,7 @@
 var gulp = require("gulp"),
 	gutil = require("gutil"),
-	webpack = require("gulp-webpack");
+	webpack = require("gulp-webpack"),
+	path = require("path");
 
 gulp.task("script", function() {
     return _buildTask(false);

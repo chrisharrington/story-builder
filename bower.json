@@ -15,9 +15,11 @@
     "tests"
   ],
   "dependencies": {
-    "getskeleton1200": "*",
     "moment": "~2.10.2",
     "react": "~0.13.2",
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "getskeleton1200": "*",
+    "eventEmitter": "~4.2.11",
+    "qwest": "~1.5.11"
   }
 }
