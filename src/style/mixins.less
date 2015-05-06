@@ -168,5 +168,8 @@
 .for-impl_(@i) when (@i > 1)    {.for-impl_((@i - 1))}
 .for-impl_(@i) when (@i > 0)    {.-each(extract(@array, @i))}
 
-.vertical-align(@height) { display:inline-block; vertical-align:middle; height:@height; line-height:@height; }
+.vertical-centre(@height) { display:inline-block; vertical-align:middle; height:@height; line-height:@height; }
 .break-letter { word-break:break-all; }
+
+.pull-right { float:right; }
+.pull-left { float:left; }

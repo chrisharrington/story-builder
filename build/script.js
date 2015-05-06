@@ -19,12 +19,14 @@ function _buildTask(watch) {
 }
 
 function _after(err, stats) {
-	if (stats.hasErrors) {
+	if (err) {
+		gutil.beep();
+		_logErrors([err]);
+	} else if (stats.compilation.errors.length > 0) {
 		gutil.beep();
 		_logErrors(stats.compilation.errors);
-	}
-	
-	gutil.log("Scripts recompiled. Time elapsed: " + moment.duration(stats.endTime - stats.startTime).asSeconds() + "s");
+	} else
+		gutil.log("Scripts recompiled. Time elapsed: " + moment.duration(stats.endTime - stats.startTime).asSeconds() + "s");
 }
 
 function _logErrors(errors) {

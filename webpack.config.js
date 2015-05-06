@@ -4,7 +4,7 @@ var path = require("path"),
 module.exports = {
     entry: "./src/index.js",
     output: {
-        filename: "bundle.js"
+        filename: "dist/bundle.js"
     },
     module: {
         loaders: [
@@ -18,6 +18,6 @@ module.exports = {
         ])
     ],
     resolve: {
-        root: [path.join(__dirname, "bower_components")]
+        root: [path.join(__dirname, "bower_components"), path.join(__dirname, "./src")]
     }
 };

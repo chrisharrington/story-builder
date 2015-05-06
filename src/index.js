@@ -6,7 +6,8 @@ var React = require("react"),
 	Base = require("./pages/base"),
 	Home = require("./pages/home");
 
-var blah = "
+require("style/variables.less");
+require("style/mixins.less");
 
 var routes = (
 	<Route handler={Base} path="/">

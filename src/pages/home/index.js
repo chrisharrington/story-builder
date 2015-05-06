@@ -1,8 +1,9 @@
 "use strict";
 
 var React = require("react"),
+	_ = require("lodash"),
 	
-	HalfTile = require("./tile/half-tile"),
+	BigTile = require("./tile/big"),
 	ThirdTile = require("./tile/third-tile"),
 	QuarterTile = require("./tile/quarter-tile"),
 	
@@ -11,34 +12,30 @@ var React = require("react"),
 require("./style.less");
 
 module.exports = React.createClass({
+	getInitialState: function() {
+		return {
+			bigStories: []	
+		};
+	},
+	
 	componentWillMount: function() {
-        Stories.filter.subscribeAndNotify(function(stories) {
-            this.setState({ stories: stories });
+        Stories.filter.subscribeAndNotify("home-stories", function(stories) {
+            this.setState({ bigStories: stories });
         }.bind(this));
         
 		Stories.filter.execute();
 	},
     
     componentWillUnmount: function() {
-        Stories.filter.unsubscribe();
+        Stories.filter.unsubscribe("home-stories");
     },
 	
 	render: function() {
 		return <div className="container spacing-top-15">
 			<div className="row">
-				<HalfTile />
-				<HalfTile />
-			</div>
-			<div className="row">
-				<ThirdTile />
-				<ThirdTile />
-				<ThirdTile />
-			</div>
-			<div className="row">
-				<QuarterTile />
-				<QuarterTile />
-				<QuarterTile />
-				<QuarterTile />
+				{_.map(this.state.bigStories, function(story) {
+				 	return <BigTile story={story} />;
+				})}
 			</div>
 		</div>;
 	}

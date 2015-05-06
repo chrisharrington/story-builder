@@ -6,10 +6,9 @@ require("./style.less");
 
 module.exports = React.createClass({
 	render: function() {
-		return <div className="eight columns">
-			<div className="tile">
-				half tile!
-			</div>
+		return <div className="icon-label">
+			<i className={"fa " + this.props.icon}></i>
+			<span>{this.props.children}</span>
 		</div>;
 	}
 });

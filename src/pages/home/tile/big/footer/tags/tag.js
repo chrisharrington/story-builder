@@ -2,10 +2,12 @@
 
 var React = require("react");
 
-require("./style.less");
+require("./tag.less");
 
 module.exports = React.createClass({
 	render: function() {
-			
+		return <div className="tag">
+			{this.props.tag}
+		</div>;
 	}
 });

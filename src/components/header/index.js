@@ -6,7 +6,7 @@ require("./style.less");
 
 module.exports = React.createClass({
 	render: function() {
-		return <div className="header">
+		return <div className="page-header">
 			
 		</div>;
 	}
