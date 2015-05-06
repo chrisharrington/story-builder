@@ -28,6 +28,7 @@
     "gulp-webpack": "^1.4.0",
     "gulp-webpack-build": "^0.8.0",
     "jsx-loader": "^0.13.2",
+    "moment": "^2.10.2",
     "require-dir": "^0.3.0",
     "webpack": "^1.8.11"
   },

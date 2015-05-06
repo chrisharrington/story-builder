@@ -1,6 +1,8 @@
 var gulp = require("gulp"),
 	webpack = require("gulp-webpack-build"),
-	path = require("path");
+	path = require("path"),
+    gutil = require("gulp-util"),
+    moment = require("moment");
 
 gulp.task("script", function() {
     return _buildTask(false);
@@ -11,33 +13,18 @@ gulp.task("watch-script", function() {
 });
 
 function _buildTask(watch) {
-//	return gulp.src("src/index.js")
-//        .pipe(gulpWebpack(_buildConfig(watch)))
-//        .pipe(gulp.dest("dist/"));
-    //gulp.src(path.join(src, '**', CONFIG_FILENAME), { base: path.resolve(src) })
     return gulp.src(webpack.config.CONFIG_FILENAME)
-        .pipe(webpack.compile())
+        .pipe(watch ? webpack.watch(_watchFired) : webpack.compile())
+        .pipe(webpack.failAfter({
+            errors: true
+        }))
         .pipe(gulp.dest("dist/"));
 }
 
-function _buildConfig(watch) {
-	return {
-        output: {
-            filename: "bundle.js"
-        },
-        module: {
-            loaders: [
-                { test: /\.js$/, loader: "jsx-loader" },
-                { test: /\.less$/, loader: "style!css!less" }
-            ]
-        },
-        plugins: [
-            new webpack.ResolverPlugin([
-                new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
-            ])
-        ],
-        resolve: {
-            root: [path.join(__dirname, "bower_components")]
-        },
-    };
+function _watchFired(err, stats) {
+    //gutil.log(webpack.format(stats));
+    if (err)
+        gutil.log(err);
+    else
+        gutil.log("Scripts recompiled. Time elapsed: " + moment.duration(stats.endTime - stats.startTime).asSeconds() + "s");
 }
