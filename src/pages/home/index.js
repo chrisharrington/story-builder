@@ -12,8 +12,16 @@ require("./style.less");
 
 module.exports = React.createClass({
 	componentWillMount: function() {
-		
+        Stories.filter.subscribeAndNotify(function(stories) {
+            this.setState({ stories: stories });
+        }.bind(this));
+        
+		Stories.filter.execute();
 	},
+    
+    componentWillUnmount: function() {
+        Stories.filter.unsubscribe();
+    },
 	
 	render: function() {
 		return <div className="container spacing-top-15">

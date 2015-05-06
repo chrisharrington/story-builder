@@ -1,8 +1,11 @@
-var config = require("../../../config");
+var config = require("../../../config"),
+    react = require("react"),
+    qwest = require("qwest");
 
 module.exports = function(verb, collection) {
 	this.execute = function(params) {
-		return qwest[verb](config.service + collection, params).then(function(response) {
+        var url = "fixtures/" + collection + ".json";
+		return qwest[verb](url, params).then(function(response) {
 			console.log(response);	
 		});
 	};

@@ -1,6 +1,5 @@
 var gulp = require("gulp"),
-	gutil = require("gutil"),
-	webpack = require("gulp-webpack"),
+	webpack = require("gulp-webpack-build"),
 	path = require("path");
 
 gulp.task("script", function() {
@@ -12,22 +11,33 @@ gulp.task("watch-script", function() {
 });
 
 function _buildTask(watch) {
-	return gulp.src("src/index.js")
-        .pipe(webpack(_buildConfig(watch)))
+//	return gulp.src("src/index.js")
+//        .pipe(gulpWebpack(_buildConfig(watch)))
+//        .pipe(gulp.dest("dist/"));
+    //gulp.src(path.join(src, '**', CONFIG_FILENAME), { base: path.resolve(src) })
+    return gulp.src(webpack.config.CONFIG_FILENAME)
+        .pipe(webpack.compile())
         .pipe(gulp.dest("dist/"));
 }
 
 function _buildConfig(watch) {
 	return {
-		watch: watch || false,
-		output: {
-			filename: "bundle.js"
-		},
-		module: {
-			loaders: [
-				{ test: /\.js$/, loader: "jsx-loader" },
-				{ test: /\.less$/, loader: "style!css!less" }
-			]
-		}
-	};
+        output: {
+            filename: "bundle.js"
+        },
+        module: {
+            loaders: [
+                { test: /\.js$/, loader: "jsx-loader" },
+                { test: /\.less$/, loader: "style!css!less" }
+            ]
+        },
+        plugins: [
+            new webpack.ResolverPlugin([
+                new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+            ])
+        ],
+        resolve: {
+            root: [path.join(__dirname, "bower_components")]
+        },
+    };
 }

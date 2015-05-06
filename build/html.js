@@ -1,8 +1,7 @@
 var gulp = require("gulp"),
 	watch = require("gulp-watch"),
 	rename = require("gulp-rename"),
-	gutil = require("gulp-util"),
-	moment = require("moment");
+	gutil = require("gulp-util");
 
 gulp.task("html", function() {
 	gulp.src("src/index.html")

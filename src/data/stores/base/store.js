@@ -1,9 +1,7 @@
-//var Method = require("./method");
-//
-//module.exports = function(collection) {
-//	this.collection = collection;
-//	
-//	this.filter = new Method("get", collection);
-//};
+var Method = require("./method");
 
-var blah = require("../base/method");
+module.exports = function(collection) {
+	this.collection = collection;
+	
+	this.filter = new Method("get", collection);
+};
