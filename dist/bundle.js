@@ -52,7 +52,7 @@
 		Base = __webpack_require__(1),
 		Home = __webpack_require__(2);
 
-	var blah = "";
+	//var blah = "
 
 	var routes = (
 		React.createElement(Route, {handler: Base, path: "/"}, 
@@ -71,9 +71,9 @@
 	var React = __webpack_require__(3),
 		Router = __webpack_require__(4),
 		RouteHandler = Router.RouteHandler,
-		Header = __webpack_require__(8);
+		Header = __webpack_require__(9);
 
-	__webpack_require__(10);
+	__webpack_require__(12);
 
 	module.exports = React.createClass({displayName: "module.exports",
 		render: function() {
@@ -96,9 +96,9 @@
 		ThirdTile = __webpack_require__(6),
 		QuarterTile = __webpack_require__(7),
 		
-		Stories = __webpack_require__(9);
+		Stories = __webpack_require__(8);
 
-	__webpack_require__(12);
+	__webpack_require__(10);
 
 	module.exports = React.createClass({displayName: "module.exports",
 		componentWillMount: function() {
@@ -23157,11 +23157,19 @@
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var Store = __webpack_require__(19);
+
+	module.exports = new Store("stories");
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
 	"use strict";
 
 	var React = __webpack_require__(3);
 
-	__webpack_require__(16);
+	__webpack_require__(17);
 
 	module.exports = React.createClass({displayName: "module.exports",
 		render: function() {
@@ -23170,14 +23178,6 @@
 			);
 		}
 	});
-
-/***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Store = __webpack_require__(19);
-
-	module.exports = new Store("stories");
 
 /***/ },
 /* 10 */
@@ -23189,40 +23189,7 @@
 	var content = __webpack_require__(11);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./app.less", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./app.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(20)();
-	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  font-family: \"Roboto\";\n  background: #F0F0F0;\n}\n", ""]);
-
-/***/ },
-/* 12 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(13);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
+	var update = __webpack_require__(16)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -23239,11 +23206,44 @@
 	}
 
 /***/ },
-/* 13 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(20)();
 	exports.push([module.id, "", ""]);
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(13);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(16)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./app.less", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./app.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(20)();
+	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  font-family: \"Roboto\";\n  background: #F0F0F0;\n}\n", ""]);
 
 /***/ },
 /* 14 */
@@ -23255,7 +23255,7 @@
 	var content = __webpack_require__(15);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
+	var update = __webpack_require__(16)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -23280,39 +23280,6 @@
 
 /***/ },
 /* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(17);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./style.less", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./style.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 17 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(20)();
-	exports.push([module.id, ".header {\n  width: 100%;\n  height: 60px;\n  background: #468aff;\n}\n", ""]);
-
-/***/ },
-/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -23534,6 +23501,39 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(18);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(16)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./style.less", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./style.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(20)();
+	exports.push([module.id, ".header {\n  width: 100%;\n  height: 60px;\n  background: #468aff;\n}\n", ""]);
 
 /***/ },
 /* 19 */

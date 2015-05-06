@@ -14,17 +14,20 @@ gulp.task("watch-script", function() {
 
 function _buildTask(watch) {
     return gulp.src(webpack.config.CONFIG_FILENAME)
-        .pipe(watch ? webpack.watch(_watchFired) : webpack.compile())
-        .pipe(webpack.failAfter({
-            errors: true
-        }))
+        .pipe(watch ? webpack.watch(_after) : webpack.compile(_after))
         .pipe(gulp.dest("dist/"));
 }
 
-function _watchFired(err, stats) {
-    //gutil.log(webpack.format(stats));
-    if (err)
-        gutil.log(err);
-    else
-        gutil.log("Scripts recompiled. Time elapsed: " + moment.duration(stats.endTime - stats.startTime).asSeconds() + "s");
+function _after(err, stats) {
+	if (stats.hasErrors) {
+		gutil.beep();
+		_logErrors(stats.compilation.errors);
+	}
+	
+	gutil.log("Scripts recompiled. Time elapsed: " + moment.duration(stats.endTime - stats.startTime).asSeconds() + "s");
+}
+
+function _logErrors(errors) {
+	for (var i = 0; i < errors.length; i++)
+		gutil.log(gutil.colors.red(errors[i]));
 }

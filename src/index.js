@@ -6,6 +6,8 @@ var React = require("react"),
 	Base = require("./pages/base"),
 	Home = require("./pages/home");
 
+var blah = "
+
 var routes = (
 	<Route handler={Base} path="/">
 		<DefaultRoute handler={Home} />
