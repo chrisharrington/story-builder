@@ -1,17 +1,15 @@
-var React = require("react");
+var React = require("react"),
+    TooltipData = require("components/tooltip/data"),
+    emitter = require("emitter");
 
 module.exports = {
     componentDidMount: function() {
         var el = this.getDOMNode();
         
-        el.addEventListener("click", function() { alert("blah"); });
+        el.addEventListener("mouseEnter", this.mouseEnter);
+    },
+    
+    mouseEnter: function() {
+        emitter.emit("tooltip-on", new TooltipData(1, 2, "the data"));
     }
 };
-
-var Tooltip = React.createClass({
-    render: function() {
-        return <div className="tooltip">blah</div>;  
-    }
-});
-
-React.render(<Tooltip />, document.body);
