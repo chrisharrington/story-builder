@@ -1,14 +1,13 @@
 "use strict";
 
-var React = require("react"),
-	Module = require("module");
+var React = require("react");
 
-require("./example-style.less");
+require("./style.less");
 
 module.exports = React.createClass({
 	render: function() {
-		return <div className="example">
-			<Module>An example React class for Webpack and LESS.</Module>
+		return <div>
+			
 		</div>;
 	}
 });

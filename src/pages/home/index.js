@@ -3,9 +3,7 @@
 var React = require("react"),
 	_ = require("lodash"),
 	
-	BigTile = require("./tile/big"),
-	ThirdTile = require("./tile/third-tile"),
-	QuarterTile = require("./tile/quarter-tile"),
+	BigRow = require("./big-row"),
 	
 	Stories = require("../../data/stores/stories");
 
@@ -14,13 +12,13 @@ require("./style.less");
 module.exports = React.createClass({
 	getInitialState: function() {
 		return {
-			bigStories: []	
+			stories: []	
 		};
 	},
 	
 	componentWillMount: function() {
         Stories.filter.subscribeAndNotify("home-stories", function(stories) {
-            this.setState({ bigStories: stories });
+            this.setState({ stories: stories });
         }.bind(this));
         
 		Stories.filter.execute();
@@ -31,12 +29,8 @@ module.exports = React.createClass({
     },
 	
 	render: function() {
-		return <div className="container spacing-top-15">
-			<div className="row">
-				{_.map(this.state.bigStories, function(story) {
-				 	return <BigTile story={story} />;
-				})}
-			</div>
+		return <div className="container spacing-top">
+			<BigRow stories={_.take(this.state.stories, 2)} />
 		</div>;
 	}
 });
