@@ -1,10 +1,13 @@
 "use strict";
 
-var React = require("react");
+var React = require("react"),
+    TooltipMixin = require("mixins/tooltip");
 
 require("./style.less");
 
 module.exports = React.createClass({
+    mixins: [TooltipMixin],
+    
 	render: function() {
 		return <div className="icon-label">
 			<i className={"fa " + this.props.icon}></i>

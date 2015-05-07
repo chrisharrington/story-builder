@@ -1643,6 +1643,22 @@ a {
   float: left;
 }
 
+.spacing-right {
+  margin-right: 1em;
+}
+
+.spacing-left {
+  margin-left: 1em;
+}
+
+.spacing-top {
+  margin-top: 1em;
+}
+
+.spacing-bottom {
+  margin-bottom: 1em;
+}
+
 .spacing-0 {
   margin: 0px !important;
 }

@@ -72,9 +72,9 @@
 	var React = __webpack_require__(3),
 		Router = __webpack_require__(4),
 		RouteHandler = Router.RouteHandler,
-		Header = __webpack_require__(15);
+		Header = __webpack_require__(17);
 
-	__webpack_require__(9);
+	__webpack_require__(13);
 
 	module.exports = React.createClass({displayName: "module.exports",
 		render: function() {
@@ -94,13 +94,13 @@
 	var React = __webpack_require__(3),
 		_ = __webpack_require__(19),
 		
-		BigTile = __webpack_require__(16),
-		ThirdTile = __webpack_require__(11),
-		QuarterTile = __webpack_require__(12),
+		BigTile = __webpack_require__(15),
+		ThirdTile = __webpack_require__(9),
+		QuarterTile = __webpack_require__(10),
 		
-		Stories = __webpack_require__(17);
+		Stories = __webpack_require__(16);
 
-	__webpack_require__(13);
+	__webpack_require__(11);
 
 	module.exports = React.createClass({displayName: "module.exports",
 		getInitialState: function() {
@@ -23121,7 +23121,7 @@
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(22)();
+	exports = module.exports = __webpack_require__(24)();
 	exports.push([module.id, "", ""]);
 
 /***/ },
@@ -23154,51 +23154,18 @@
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(22)();
+	exports = module.exports = __webpack_require__(24)();
 	exports.push([module.id, ".break-letter {\n  word-break: break-all;\n}\n.pull-right {\n  float: right;\n}\n.pull-left {\n  float: left;\n}\n", ""]);
 
 /***/ },
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(10);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./app.less", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./app.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(22)();
-	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  font-family: \"Roboto\";\n  background: #F0F0F0;\n}\na {\n  color: #41b3ff;\n  text-decoration: none;\n}\n", ""]);
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
 	"use strict";
 
 	var React = __webpack_require__(3);
 
-	__webpack_require__(23);
+	__webpack_require__(20);
 
 	module.exports = React.createClass({displayName: "module.exports",
 		render: function() {
@@ -23211,14 +23178,14 @@
 	});
 
 /***/ },
-/* 12 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	var React = __webpack_require__(3);
 
-	__webpack_require__(23);
+	__webpack_require__(20);
 
 	module.exports = React.createClass({displayName: "module.exports",
 		render: function() {
@@ -23231,13 +23198,13 @@
 	});
 
 /***/ },
-/* 13 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(14);
+	var content = __webpack_require__(12);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(18)(content, {});
@@ -23257,32 +23224,47 @@
 	}
 
 /***/ },
-/* 14 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(22)();
+	exports = module.exports = __webpack_require__(24)();
 	exports.push([module.id, ".break-letter {\n  word-break: break-all;\n}\n.pull-right {\n  float: right;\n}\n.pull-left {\n  float: left;\n}\n.tile {\n  width: 100%;\n  padding: 1em;\n  background-color: white;\n  -webkit-box-shadow: 0 2px 8px rgba(100, 100, 100, 0.4);\n  -moz-box-shadow: 0 2px 8px rgba(100, 100, 100, 0.4);\n  box-shadow: 0 2px 8px rgba(100, 100, 100, 0.4);\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n", ""]);
 
 /***/ },
-/* 15 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
 
-	var React = __webpack_require__(3);
-
-	__webpack_require__(25);
-
-	module.exports = React.createClass({displayName: "module.exports",
-		render: function() {
-			return React.createElement("div", {className: "page-header"}
-				
-			);
+	// load the styles
+	var content = __webpack_require__(14);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(18)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./app.less", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./app.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
 		}
-	});
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
-/* 16 */
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(24)();
+	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  font-family: \"Roboto\";\n  background: #F0F0F0;\n}\na {\n  color: #41b3ff;\n  text-decoration: none;\n}\n", ""]);
+
+/***/ },
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23292,7 +23274,7 @@
 		Blurb = __webpack_require__(30),
 		Footer = __webpack_require__(31);
 
-	__webpack_require__(27);
+	__webpack_require__(25);
 
 	module.exports = React.createClass({displayName: "module.exports",
 		render: function() {
@@ -23308,12 +23290,30 @@
 	});
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var Store = __webpack_require__(32);
 
 	module.exports = new Store("stories");
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(3);
+
+	__webpack_require__(27);
+
+	module.exports = React.createClass({displayName: "module.exports",
+		render: function() {
+			return React.createElement("div", {className: "page-header"}
+				
+			);
+		}
+	});
 
 /***/ },
 /* 18 */
@@ -35746,12 +35746,45 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(42)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(41)(module), (function() { return this; }())))
 
 /***/ },
-/* 20 */,
-/* 21 */,
-/* 22 */
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(21);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(18)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/less-loader/index.js!./style.less", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/less-loader/index.js!./style.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(24)();
+	exports.push([module.id, ".break-letter {\n  word-break: break-all;\n}\n.pull-right {\n  float: right;\n}\n.pull-left {\n  float: left;\n}\n.tile {\n  width: 100%;\n  padding: 1em;\n  background-color: white;\n  -webkit-box-shadow: 0 2px 8px rgba(100, 100, 100, 0.4);\n  -moz-box-shadow: 0 2px 8px rgba(100, 100, 100, 0.4);\n  box-shadow: 0 2px 8px rgba(100, 100, 100, 0.4);\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n.tile .blurb {\n  font-size: 0.85em;\n  color: #a0a0a0;\n  margin-top: 0.5em;\n}\n.tile .footer {\n  font-size: 0.85em;\n  margin-top: 0.5em;\n}\n", ""]);
+
+/***/ },
+/* 22 */,
+/* 23 */,
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -35807,39 +35840,6 @@
 
 
 /***/ },
-/* 23 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(24);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/less-loader/index.js!./style.less", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/less-loader/index.js!./style.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(22)();
-	exports.push([module.id, ".break-letter {\n  word-break: break-all;\n}\n.pull-right {\n  float: right;\n}\n.pull-left {\n  float: left;\n}\n.tile {\n  width: 100%;\n  padding: 1em;\n  background-color: white;\n  -webkit-box-shadow: 0 2px 8px rgba(100, 100, 100, 0.4);\n  -moz-box-shadow: 0 2px 8px rgba(100, 100, 100, 0.4);\n  box-shadow: 0 2px 8px rgba(100, 100, 100, 0.4);\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n.tile .blurb {\n  font-size: 0.85em;\n  color: #a0a0a0;\n  margin-top: 0.5em;\n}\n.tile .footer {\n  font-size: 0.85em;\n  margin-top: 0.5em;\n}\n", ""]);
-
-/***/ },
 /* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -35847,39 +35847,6 @@
 
 	// load the styles
 	var content = __webpack_require__(26);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./style.less", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./style.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 26 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(22)();
-	exports.push([module.id, ".page-header {\n  width: 100%;\n  height: 60px;\n  background: #41b3ff;\n}\n", ""]);
-
-/***/ },
-/* 27 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(28);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(18)(content, {});
@@ -35899,11 +35866,44 @@
 	}
 
 /***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(24)();
+	exports.push([module.id, ".break-letter {\n  word-break: break-all;\n}\n.pull-right {\n  float: right;\n}\n.pull-left {\n  float: left;\n}\n.tile .footer {\n  font-size: 0.85em;\n  margin-top: 0.5em;\n}\n", ""]);
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(28);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(18)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./style.less", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./style.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
 /* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(22)();
-	exports.push([module.id, ".break-letter {\n  word-break: break-all;\n}\n.pull-right {\n  float: right;\n}\n.pull-left {\n  float: left;\n}\n.tile .footer {\n  font-size: 0.85em;\n  margin-top: 0.5em;\n}\n", ""]);
+	exports = module.exports = __webpack_require__(24)();
+	exports.push([module.id, ".page-header {\n  width: 100%;\n  height: 60px;\n  background: #41b3ff;\n}\n", ""]);
 
 /***/ },
 /* 29 */
@@ -35912,7 +35912,7 @@
 	"use strict";
 
 	var React = __webpack_require__(3),
-		Gravatar = __webpack_require__(43),
+		Gravatar = __webpack_require__(42),
 		Title = __webpack_require__(33),
 		Favourite = __webpack_require__(38);
 
@@ -35963,6 +35963,8 @@
 		Tags = __webpack_require__(39),
 		IconLabel = __webpack_require__(40);
 
+	__webpack_require__(56);
+
 	module.exports = React.createClass({displayName: "module.exports",
 		render: function() {
 			var story = this.props.story;
@@ -35970,12 +35972,19 @@
 				React.createElement("div", {className: "pull-left"}, 
 					React.createElement(Tags, {story: story})
 				), 
-				React.createElement("div", {className: "pull-right"}, 
+				React.createElement("div", {className: "pull-left spacing-left"}, 
 					React.createElement(IconLabel, {icon: "fa-eye"}, story.views)
 				), 
-				React.createElement("div", {className: "pull-right"}, 
+				React.createElement("div", {className: "pull-left spacing-left"}, 
 					React.createElement(IconLabel, {icon: "fa-star"}, story.favourites)
 				), 
+	            React.createElement("div", {className: "pull-left spacing-left"}, 
+	                React.createElement(IconLabel, {icon: "fa-files-o"}, story.entries)
+	            ), 
+	            React.createElement("a", {className: "pull-right read-more"}, 
+	                React.createElement("span", null, "Read more"), 
+	                React.createElement("i", {className: "fa fa-angle-double-right"})
+	            ), 
 				React.createElement("div", {className: "clearfix"})
 			);
 		}
@@ -35985,7 +35994,7 @@
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Method = __webpack_require__(41);
+	var Method = __webpack_require__(43);
 
 	module.exports = function(collection) {
 		this.collection = collection;
@@ -36045,7 +36054,7 @@
 /* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(22)();
+	exports = module.exports = __webpack_require__(24)();
 	exports.push([module.id, ".header .image-container {\n  float: left;\n  margin-right: 1em;\n}\n.header .title-container {\n  float: left;\n}\n.header .title-container .title {\n  font-size: 1.5em;\n}\n.header .title-container .authour {\n  color: #a0a0a0;\n  font-size: 0.8em;\n  display: block;\n  margin-top: -3px;\n}\n", ""]);
 
 /***/ },
@@ -36078,7 +36087,7 @@
 /* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(22)();
+	exports = module.exports = __webpack_require__(24)();
 	exports.push([module.id, ".blurb {\n  font-size: 0.85em;\n  color: #a0a0a0;\n  margin-top: 0.5em;\n  float: left;\n  width: 100%;\n  margin-bottom: 1em;\n}\n", ""]);
 
 /***/ },
@@ -36089,13 +36098,13 @@
 
 	var React = __webpack_require__(3);
 
-	__webpack_require__(54);
+	__webpack_require__(44);
 
 	module.exports = React.createClass({displayName: "module.exports",
 		render: function() {
 			var story = this.props.story;
 			return React.createElement("div", {className: "favourite"}, 
-				React.createElement("i", {className: "fa fa-" + (story.isFavourite ? "star" : "star-o"), onClick: this.toggle})
+				React.createElement("i", {className: "fa fa-star " + (story.isFavourite ? "favourite" : ""), onClick: this.toggle})
 			);
 		},
 		
@@ -36118,17 +36127,15 @@
 
 	var React = __webpack_require__(3),
 		_ = __webpack_require__(19),
-		
-		Tag = __webpack_require__(44);
+
+	    IconLabel = __webpack_require__(40),
+		Tag = __webpack_require__(46);
 
 	module.exports = React.createClass({displayName: "module.exports",
 		render: function() {
 			var tags = this.props.story.tags;
-			return React.createElement("div", null, 
-				_.map(tags, function(tag) {
-				 	return React.createElement(Tag, {tag: tag});
-				}), 
-				React.createElement("div", {className: "clearfix"})
+			return React.createElement("div", {className: "pull-left"}, 
+				React.createElement(IconLabel, {icon: "fa-tags"}, tags.length)
 			);
 		}
 	});
@@ -36139,11 +36146,14 @@
 
 	"use strict";
 
-	var React = __webpack_require__(3);
+	var React = __webpack_require__(3),
+	    TooltipMixin = __webpack_require__(58);
 
-	__webpack_require__(45);
+	__webpack_require__(47);
 
 	module.exports = React.createClass({displayName: "module.exports",
+	    mixins: [TooltipMixin],
+	    
 		render: function() {
 			return React.createElement("div", {className: "icon-label"}, 
 				React.createElement("i", {className: "fa " + this.props.icon}), 
@@ -36156,9 +36166,47 @@
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var config = __webpack_require__(47),
+	module.exports = function(module) {
+		if(!module.webpackPolyfill) {
+			module.deprecate = function() {};
+			module.paths = [];
+			// module.parent = undefined by default
+			module.children = [];
+			module.webpackPolyfill = 1;
+		}
+		return module;
+	}
+
+
+/***/ },
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(3),
+		md5 = __webpack_require__(52);
+
+	__webpack_require__(49);
+
+	module.exports = React.createClass({displayName: "module.exports",
+		render: function() {
+			var url = "http://www.gravatar.com/avatar/" + md5(this.props.email);
+			if (this.props.size)
+				url += "?s=" + this.props.size;
+			return React.createElement("div", {className: "gravatar"}, 
+				React.createElement("img", {src: url})
+			);
+		}
+	});
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var config = __webpack_require__(51),
 	    react = __webpack_require__(3),
-	    qwest = __webpack_require__(50);
+	    qwest = __webpack_require__(55);
 
 	module.exports = function(verb, collection) {
 		var _subscribers = {}, _result;
@@ -36197,69 +36245,13 @@
 	};
 
 /***/ },
-/* 42 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = function(module) {
-		if(!module.webpackPolyfill) {
-			module.deprecate = function() {};
-			module.paths = [];
-			// module.parent = undefined by default
-			module.children = [];
-			module.webpackPolyfill = 1;
-		}
-		return module;
-	}
-
-
-/***/ },
-/* 43 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(3),
-		md5 = __webpack_require__(51);
-
-	__webpack_require__(48);
-
-	module.exports = React.createClass({displayName: "module.exports",
-		render: function() {
-			var url = "http://www.gravatar.com/avatar/" + md5(this.props.email);
-			if (this.props.size)
-				url += "?s=" + this.props.size;
-			return React.createElement("div", {className: "gravatar"}, 
-				React.createElement("img", {src: url})
-			);
-		}
-	});
-
-/***/ },
 /* 44 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(3);
-
-	__webpack_require__(52);
-
-	module.exports = React.createClass({displayName: "module.exports",
-		render: function() {
-			return React.createElement("div", {className: "tag"}, 
-				this.props.tag
-			);
-		}
-	});
-
-/***/ },
-/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(46);
+	var content = __webpack_require__(45);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(18)(content, {});
@@ -36279,28 +36271,71 @@
 	}
 
 /***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(24)();
+	exports.push([module.id, ".favourite i.fa {\n  float: right;\n  color: #e0e0e0;\n  cursor: pointer;\n  font-size: 1.375em;\n  padding: 5px;\n}\n.favourite i.favourite {\n  color: #ffad1a;\n}\n", ""]);
+
+/***/ },
 /* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(22)();
-	exports.push([module.id, ".break-letter {\n  word-break: break-all;\n}\n.pull-right {\n  float: right;\n}\n.pull-left {\n  float: left;\n}\n.icon-label {\n  float: right;\n  margin-top: 1px;\n  margin-left: 1em;\n}\n.icon-label i {\n  float: left;\n  color: #41b3ff;\n  display: inline-block;\n  vertical-align: middle;\n  height: 21px;\n  line-height: 21px;\n}\n.icon-label span {\n  float: left;\n  margin-left: 0.5em;\n  color: #a0a0a0;\n}\n", ""]);
+	"use strict";
+
+	var React = __webpack_require__(3);
+
+	__webpack_require__(53);
+
+	module.exports = React.createClass({displayName: "module.exports",
+		render: function() {
+			return React.createElement("div", {className: "tag"}, 
+				this.props.tag
+			);
+		}
+	});
 
 /***/ },
 /* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
-	{
-		service: ""
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(48);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(18)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../../../../node_modules/css-loader/index.js!./../../../../../../../node_modules/less-loader/index.js!./style.less", function() {
+				var newContent = require("!!./../../../../../../../node_modules/css-loader/index.js!./../../../../../../../node_modules/less-loader/index.js!./style.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
 	}
 
 /***/ },
 /* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
+	exports = module.exports = __webpack_require__(24)();
+	exports.push([module.id, ".break-letter {\n  word-break: break-all;\n}\n.pull-right {\n  float: right;\n}\n.pull-left {\n  float: left;\n}\n.icon-label {\n  float: right;\n  margin-top: 1px;\n}\n.icon-label i {\n  float: left;\n  color: #41b3ff;\n  display: inline-block;\n  vertical-align: middle;\n  height: 21px;\n  line-height: 21px;\n}\n.icon-label span {\n  float: left;\n  margin-left: 0.4em;\n  color: #a0a0a0;\n}\n", ""]);
+
+/***/ },
+/* 49 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(49);
+	var content = __webpack_require__(50);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(18)(content, {});
@@ -36320,14 +36355,335 @@
 	}
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(22)();
+	exports = module.exports = __webpack_require__(24)();
 	exports.push([module.id, ".gravatar img {\n  border-radius: 50%;\n}\n", ""]);
 
 /***/ },
-/* 50 */
+/* 51 */
+/***/ function(module, exports, __webpack_require__) {
+
+	{
+		service: ""
+	}
+
+/***/ },
+/* 52 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_RESULT__;/*
+	 * JavaScript MD5 1.0.1
+	 * https://github.com/blueimp/JavaScript-MD5
+	 *
+	 * Copyright 2011, Sebastian Tschan
+	 * https://blueimp.net
+	 *
+	 * Licensed under the MIT license:
+	 * http://www.opensource.org/licenses/MIT
+	 * 
+	 * Based on
+	 * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
+	 * Digest Algorithm, as defined in RFC 1321.
+	 * Version 2.2 Copyright (C) Paul Johnston 1999 - 2009
+	 * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+	 * Distributed under the BSD License
+	 * See http://pajhome.org.uk/crypt/md5 for more info.
+	 */
+
+	/*jslint bitwise: true */
+	/*global unescape, define */
+
+	(function ($) {
+	    'use strict';
+
+	    /*
+	    * Add integers, wrapping at 2^32. This uses 16-bit operations internally
+	    * to work around bugs in some JS interpreters.
+	    */
+	    function safe_add(x, y) {
+	        var lsw = (x & 0xFFFF) + (y & 0xFFFF),
+	            msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+	        return (msw << 16) | (lsw & 0xFFFF);
+	    }
+
+	    /*
+	    * Bitwise rotate a 32-bit number to the left.
+	    */
+	    function bit_rol(num, cnt) {
+	        return (num << cnt) | (num >>> (32 - cnt));
+	    }
+
+	    /*
+	    * These functions implement the four basic operations the algorithm uses.
+	    */
+	    function md5_cmn(q, a, b, x, s, t) {
+	        return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s), b);
+	    }
+	    function md5_ff(a, b, c, d, x, s, t) {
+	        return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t);
+	    }
+	    function md5_gg(a, b, c, d, x, s, t) {
+	        return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t);
+	    }
+	    function md5_hh(a, b, c, d, x, s, t) {
+	        return md5_cmn(b ^ c ^ d, a, b, x, s, t);
+	    }
+	    function md5_ii(a, b, c, d, x, s, t) {
+	        return md5_cmn(c ^ (b | (~d)), a, b, x, s, t);
+	    }
+
+	    /*
+	    * Calculate the MD5 of an array of little-endian words, and a bit length.
+	    */
+	    function binl_md5(x, len) {
+	        /* append padding */
+	        x[len >> 5] |= 0x80 << (len % 32);
+	        x[(((len + 64) >>> 9) << 4) + 14] = len;
+
+	        var i, olda, oldb, oldc, oldd,
+	            a =  1732584193,
+	            b = -271733879,
+	            c = -1732584194,
+	            d =  271733878;
+
+	        for (i = 0; i < x.length; i += 16) {
+	            olda = a;
+	            oldb = b;
+	            oldc = c;
+	            oldd = d;
+
+	            a = md5_ff(a, b, c, d, x[i],       7, -680876936);
+	            d = md5_ff(d, a, b, c, x[i +  1], 12, -389564586);
+	            c = md5_ff(c, d, a, b, x[i +  2], 17,  606105819);
+	            b = md5_ff(b, c, d, a, x[i +  3], 22, -1044525330);
+	            a = md5_ff(a, b, c, d, x[i +  4],  7, -176418897);
+	            d = md5_ff(d, a, b, c, x[i +  5], 12,  1200080426);
+	            c = md5_ff(c, d, a, b, x[i +  6], 17, -1473231341);
+	            b = md5_ff(b, c, d, a, x[i +  7], 22, -45705983);
+	            a = md5_ff(a, b, c, d, x[i +  8],  7,  1770035416);
+	            d = md5_ff(d, a, b, c, x[i +  9], 12, -1958414417);
+	            c = md5_ff(c, d, a, b, x[i + 10], 17, -42063);
+	            b = md5_ff(b, c, d, a, x[i + 11], 22, -1990404162);
+	            a = md5_ff(a, b, c, d, x[i + 12],  7,  1804603682);
+	            d = md5_ff(d, a, b, c, x[i + 13], 12, -40341101);
+	            c = md5_ff(c, d, a, b, x[i + 14], 17, -1502002290);
+	            b = md5_ff(b, c, d, a, x[i + 15], 22,  1236535329);
+
+	            a = md5_gg(a, b, c, d, x[i +  1],  5, -165796510);
+	            d = md5_gg(d, a, b, c, x[i +  6],  9, -1069501632);
+	            c = md5_gg(c, d, a, b, x[i + 11], 14,  643717713);
+	            b = md5_gg(b, c, d, a, x[i],      20, -373897302);
+	            a = md5_gg(a, b, c, d, x[i +  5],  5, -701558691);
+	            d = md5_gg(d, a, b, c, x[i + 10],  9,  38016083);
+	            c = md5_gg(c, d, a, b, x[i + 15], 14, -660478335);
+	            b = md5_gg(b, c, d, a, x[i +  4], 20, -405537848);
+	            a = md5_gg(a, b, c, d, x[i +  9],  5,  568446438);
+	            d = md5_gg(d, a, b, c, x[i + 14],  9, -1019803690);
+	            c = md5_gg(c, d, a, b, x[i +  3], 14, -187363961);
+	            b = md5_gg(b, c, d, a, x[i +  8], 20,  1163531501);
+	            a = md5_gg(a, b, c, d, x[i + 13],  5, -1444681467);
+	            d = md5_gg(d, a, b, c, x[i +  2],  9, -51403784);
+	            c = md5_gg(c, d, a, b, x[i +  7], 14,  1735328473);
+	            b = md5_gg(b, c, d, a, x[i + 12], 20, -1926607734);
+
+	            a = md5_hh(a, b, c, d, x[i +  5],  4, -378558);
+	            d = md5_hh(d, a, b, c, x[i +  8], 11, -2022574463);
+	            c = md5_hh(c, d, a, b, x[i + 11], 16,  1839030562);
+	            b = md5_hh(b, c, d, a, x[i + 14], 23, -35309556);
+	            a = md5_hh(a, b, c, d, x[i +  1],  4, -1530992060);
+	            d = md5_hh(d, a, b, c, x[i +  4], 11,  1272893353);
+	            c = md5_hh(c, d, a, b, x[i +  7], 16, -155497632);
+	            b = md5_hh(b, c, d, a, x[i + 10], 23, -1094730640);
+	            a = md5_hh(a, b, c, d, x[i + 13],  4,  681279174);
+	            d = md5_hh(d, a, b, c, x[i],      11, -358537222);
+	            c = md5_hh(c, d, a, b, x[i +  3], 16, -722521979);
+	            b = md5_hh(b, c, d, a, x[i +  6], 23,  76029189);
+	            a = md5_hh(a, b, c, d, x[i +  9],  4, -640364487);
+	            d = md5_hh(d, a, b, c, x[i + 12], 11, -421815835);
+	            c = md5_hh(c, d, a, b, x[i + 15], 16,  530742520);
+	            b = md5_hh(b, c, d, a, x[i +  2], 23, -995338651);
+
+	            a = md5_ii(a, b, c, d, x[i],       6, -198630844);
+	            d = md5_ii(d, a, b, c, x[i +  7], 10,  1126891415);
+	            c = md5_ii(c, d, a, b, x[i + 14], 15, -1416354905);
+	            b = md5_ii(b, c, d, a, x[i +  5], 21, -57434055);
+	            a = md5_ii(a, b, c, d, x[i + 12],  6,  1700485571);
+	            d = md5_ii(d, a, b, c, x[i +  3], 10, -1894986606);
+	            c = md5_ii(c, d, a, b, x[i + 10], 15, -1051523);
+	            b = md5_ii(b, c, d, a, x[i +  1], 21, -2054922799);
+	            a = md5_ii(a, b, c, d, x[i +  8],  6,  1873313359);
+	            d = md5_ii(d, a, b, c, x[i + 15], 10, -30611744);
+	            c = md5_ii(c, d, a, b, x[i +  6], 15, -1560198380);
+	            b = md5_ii(b, c, d, a, x[i + 13], 21,  1309151649);
+	            a = md5_ii(a, b, c, d, x[i +  4],  6, -145523070);
+	            d = md5_ii(d, a, b, c, x[i + 11], 10, -1120210379);
+	            c = md5_ii(c, d, a, b, x[i +  2], 15,  718787259);
+	            b = md5_ii(b, c, d, a, x[i +  9], 21, -343485551);
+
+	            a = safe_add(a, olda);
+	            b = safe_add(b, oldb);
+	            c = safe_add(c, oldc);
+	            d = safe_add(d, oldd);
+	        }
+	        return [a, b, c, d];
+	    }
+
+	    /*
+	    * Convert an array of little-endian words to a string
+	    */
+	    function binl2rstr(input) {
+	        var i,
+	            output = '';
+	        for (i = 0; i < input.length * 32; i += 8) {
+	            output += String.fromCharCode((input[i >> 5] >>> (i % 32)) & 0xFF);
+	        }
+	        return output;
+	    }
+
+	    /*
+	    * Convert a raw string to an array of little-endian words
+	    * Characters >255 have their high-byte silently ignored.
+	    */
+	    function rstr2binl(input) {
+	        var i,
+	            output = [];
+	        output[(input.length >> 2) - 1] = undefined;
+	        for (i = 0; i < output.length; i += 1) {
+	            output[i] = 0;
+	        }
+	        for (i = 0; i < input.length * 8; i += 8) {
+	            output[i >> 5] |= (input.charCodeAt(i / 8) & 0xFF) << (i % 32);
+	        }
+	        return output;
+	    }
+
+	    /*
+	    * Calculate the MD5 of a raw string
+	    */
+	    function rstr_md5(s) {
+	        return binl2rstr(binl_md5(rstr2binl(s), s.length * 8));
+	    }
+
+	    /*
+	    * Calculate the HMAC-MD5, of a key and some data (raw strings)
+	    */
+	    function rstr_hmac_md5(key, data) {
+	        var i,
+	            bkey = rstr2binl(key),
+	            ipad = [],
+	            opad = [],
+	            hash;
+	        ipad[15] = opad[15] = undefined;
+	        if (bkey.length > 16) {
+	            bkey = binl_md5(bkey, key.length * 8);
+	        }
+	        for (i = 0; i < 16; i += 1) {
+	            ipad[i] = bkey[i] ^ 0x36363636;
+	            opad[i] = bkey[i] ^ 0x5C5C5C5C;
+	        }
+	        hash = binl_md5(ipad.concat(rstr2binl(data)), 512 + data.length * 8);
+	        return binl2rstr(binl_md5(opad.concat(hash), 512 + 128));
+	    }
+
+	    /*
+	    * Convert a raw string to a hex string
+	    */
+	    function rstr2hex(input) {
+	        var hex_tab = '0123456789abcdef',
+	            output = '',
+	            x,
+	            i;
+	        for (i = 0; i < input.length; i += 1) {
+	            x = input.charCodeAt(i);
+	            output += hex_tab.charAt((x >>> 4) & 0x0F) +
+	                hex_tab.charAt(x & 0x0F);
+	        }
+	        return output;
+	    }
+
+	    /*
+	    * Encode a string as utf-8
+	    */
+	    function str2rstr_utf8(input) {
+	        return unescape(encodeURIComponent(input));
+	    }
+
+	    /*
+	    * Take string arguments and return either raw or hex encoded strings
+	    */
+	    function raw_md5(s) {
+	        return rstr_md5(str2rstr_utf8(s));
+	    }
+	    function hex_md5(s) {
+	        return rstr2hex(raw_md5(s));
+	    }
+	    function raw_hmac_md5(k, d) {
+	        return rstr_hmac_md5(str2rstr_utf8(k), str2rstr_utf8(d));
+	    }
+	    function hex_hmac_md5(k, d) {
+	        return rstr2hex(raw_hmac_md5(k, d));
+	    }
+
+	    function md5(string, key, raw) {
+	        if (!key) {
+	            if (!raw) {
+	                return hex_md5(string);
+	            }
+	            return raw_md5(string);
+	        }
+	        if (!raw) {
+	            return hex_hmac_md5(key, string);
+	        }
+	        return raw_hmac_md5(key, string);
+	    }
+
+	    if (true) {
+	        !(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
+	            return md5;
+	        }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    } else {
+	        $.md5 = md5;
+	    }
+	}(this));
+
+
+/***/ },
+/* 53 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(54);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(18)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../../../../node_modules/css-loader/index.js!./../../../../../../../node_modules/less-loader/index.js!./tag.less", function() {
+				var newContent = require("!!./../../../../../../../node_modules/css-loader/index.js!./../../../../../../../node_modules/less-loader/index.js!./tag.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(24)();
+	exports.push([module.id, ".tag {\n  float: left;\n  background: #E0E0E0;\n  padding: 3px 8px;\n  border-radius: 3px;\n  color: #777;\n  cursor: pointer;\n  font-size: 0.8em;\n  margin-right: 0.5em;\n}\n", ""]);
+
+/***/ },
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! qwest 1.5.11 (https://github.com/pyrsmk/qwest) */
@@ -36833,293 +37189,13 @@
 
 
 /***/ },
-/* 51 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * JavaScript MD5 1.0.1
-	 * https://github.com/blueimp/JavaScript-MD5
-	 *
-	 * Copyright 2011, Sebastian Tschan
-	 * https://blueimp.net
-	 *
-	 * Licensed under the MIT license:
-	 * http://www.opensource.org/licenses/MIT
-	 * 
-	 * Based on
-	 * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
-	 * Digest Algorithm, as defined in RFC 1321.
-	 * Version 2.2 Copyright (C) Paul Johnston 1999 - 2009
-	 * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
-	 * Distributed under the BSD License
-	 * See http://pajhome.org.uk/crypt/md5 for more info.
-	 */
-
-	/*jslint bitwise: true */
-	/*global unescape, define */
-
-	(function ($) {
-	    'use strict';
-
-	    /*
-	    * Add integers, wrapping at 2^32. This uses 16-bit operations internally
-	    * to work around bugs in some JS interpreters.
-	    */
-	    function safe_add(x, y) {
-	        var lsw = (x & 0xFFFF) + (y & 0xFFFF),
-	            msw = (x >> 16) + (y >> 16) + (lsw >> 16);
-	        return (msw << 16) | (lsw & 0xFFFF);
-	    }
-
-	    /*
-	    * Bitwise rotate a 32-bit number to the left.
-	    */
-	    function bit_rol(num, cnt) {
-	        return (num << cnt) | (num >>> (32 - cnt));
-	    }
-
-	    /*
-	    * These functions implement the four basic operations the algorithm uses.
-	    */
-	    function md5_cmn(q, a, b, x, s, t) {
-	        return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s), b);
-	    }
-	    function md5_ff(a, b, c, d, x, s, t) {
-	        return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t);
-	    }
-	    function md5_gg(a, b, c, d, x, s, t) {
-	        return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t);
-	    }
-	    function md5_hh(a, b, c, d, x, s, t) {
-	        return md5_cmn(b ^ c ^ d, a, b, x, s, t);
-	    }
-	    function md5_ii(a, b, c, d, x, s, t) {
-	        return md5_cmn(c ^ (b | (~d)), a, b, x, s, t);
-	    }
-
-	    /*
-	    * Calculate the MD5 of an array of little-endian words, and a bit length.
-	    */
-	    function binl_md5(x, len) {
-	        /* append padding */
-	        x[len >> 5] |= 0x80 << (len % 32);
-	        x[(((len + 64) >>> 9) << 4) + 14] = len;
-
-	        var i, olda, oldb, oldc, oldd,
-	            a =  1732584193,
-	            b = -271733879,
-	            c = -1732584194,
-	            d =  271733878;
-
-	        for (i = 0; i < x.length; i += 16) {
-	            olda = a;
-	            oldb = b;
-	            oldc = c;
-	            oldd = d;
-
-	            a = md5_ff(a, b, c, d, x[i],       7, -680876936);
-	            d = md5_ff(d, a, b, c, x[i +  1], 12, -389564586);
-	            c = md5_ff(c, d, a, b, x[i +  2], 17,  606105819);
-	            b = md5_ff(b, c, d, a, x[i +  3], 22, -1044525330);
-	            a = md5_ff(a, b, c, d, x[i +  4],  7, -176418897);
-	            d = md5_ff(d, a, b, c, x[i +  5], 12,  1200080426);
-	            c = md5_ff(c, d, a, b, x[i +  6], 17, -1473231341);
-	            b = md5_ff(b, c, d, a, x[i +  7], 22, -45705983);
-	            a = md5_ff(a, b, c, d, x[i +  8],  7,  1770035416);
-	            d = md5_ff(d, a, b, c, x[i +  9], 12, -1958414417);
-	            c = md5_ff(c, d, a, b, x[i + 10], 17, -42063);
-	            b = md5_ff(b, c, d, a, x[i + 11], 22, -1990404162);
-	            a = md5_ff(a, b, c, d, x[i + 12],  7,  1804603682);
-	            d = md5_ff(d, a, b, c, x[i + 13], 12, -40341101);
-	            c = md5_ff(c, d, a, b, x[i + 14], 17, -1502002290);
-	            b = md5_ff(b, c, d, a, x[i + 15], 22,  1236535329);
-
-	            a = md5_gg(a, b, c, d, x[i +  1],  5, -165796510);
-	            d = md5_gg(d, a, b, c, x[i +  6],  9, -1069501632);
-	            c = md5_gg(c, d, a, b, x[i + 11], 14,  643717713);
-	            b = md5_gg(b, c, d, a, x[i],      20, -373897302);
-	            a = md5_gg(a, b, c, d, x[i +  5],  5, -701558691);
-	            d = md5_gg(d, a, b, c, x[i + 10],  9,  38016083);
-	            c = md5_gg(c, d, a, b, x[i + 15], 14, -660478335);
-	            b = md5_gg(b, c, d, a, x[i +  4], 20, -405537848);
-	            a = md5_gg(a, b, c, d, x[i +  9],  5,  568446438);
-	            d = md5_gg(d, a, b, c, x[i + 14],  9, -1019803690);
-	            c = md5_gg(c, d, a, b, x[i +  3], 14, -187363961);
-	            b = md5_gg(b, c, d, a, x[i +  8], 20,  1163531501);
-	            a = md5_gg(a, b, c, d, x[i + 13],  5, -1444681467);
-	            d = md5_gg(d, a, b, c, x[i +  2],  9, -51403784);
-	            c = md5_gg(c, d, a, b, x[i +  7], 14,  1735328473);
-	            b = md5_gg(b, c, d, a, x[i + 12], 20, -1926607734);
-
-	            a = md5_hh(a, b, c, d, x[i +  5],  4, -378558);
-	            d = md5_hh(d, a, b, c, x[i +  8], 11, -2022574463);
-	            c = md5_hh(c, d, a, b, x[i + 11], 16,  1839030562);
-	            b = md5_hh(b, c, d, a, x[i + 14], 23, -35309556);
-	            a = md5_hh(a, b, c, d, x[i +  1],  4, -1530992060);
-	            d = md5_hh(d, a, b, c, x[i +  4], 11,  1272893353);
-	            c = md5_hh(c, d, a, b, x[i +  7], 16, -155497632);
-	            b = md5_hh(b, c, d, a, x[i + 10], 23, -1094730640);
-	            a = md5_hh(a, b, c, d, x[i + 13],  4,  681279174);
-	            d = md5_hh(d, a, b, c, x[i],      11, -358537222);
-	            c = md5_hh(c, d, a, b, x[i +  3], 16, -722521979);
-	            b = md5_hh(b, c, d, a, x[i +  6], 23,  76029189);
-	            a = md5_hh(a, b, c, d, x[i +  9],  4, -640364487);
-	            d = md5_hh(d, a, b, c, x[i + 12], 11, -421815835);
-	            c = md5_hh(c, d, a, b, x[i + 15], 16,  530742520);
-	            b = md5_hh(b, c, d, a, x[i +  2], 23, -995338651);
-
-	            a = md5_ii(a, b, c, d, x[i],       6, -198630844);
-	            d = md5_ii(d, a, b, c, x[i +  7], 10,  1126891415);
-	            c = md5_ii(c, d, a, b, x[i + 14], 15, -1416354905);
-	            b = md5_ii(b, c, d, a, x[i +  5], 21, -57434055);
-	            a = md5_ii(a, b, c, d, x[i + 12],  6,  1700485571);
-	            d = md5_ii(d, a, b, c, x[i +  3], 10, -1894986606);
-	            c = md5_ii(c, d, a, b, x[i + 10], 15, -1051523);
-	            b = md5_ii(b, c, d, a, x[i +  1], 21, -2054922799);
-	            a = md5_ii(a, b, c, d, x[i +  8],  6,  1873313359);
-	            d = md5_ii(d, a, b, c, x[i + 15], 10, -30611744);
-	            c = md5_ii(c, d, a, b, x[i +  6], 15, -1560198380);
-	            b = md5_ii(b, c, d, a, x[i + 13], 21,  1309151649);
-	            a = md5_ii(a, b, c, d, x[i +  4],  6, -145523070);
-	            d = md5_ii(d, a, b, c, x[i + 11], 10, -1120210379);
-	            c = md5_ii(c, d, a, b, x[i +  2], 15,  718787259);
-	            b = md5_ii(b, c, d, a, x[i +  9], 21, -343485551);
-
-	            a = safe_add(a, olda);
-	            b = safe_add(b, oldb);
-	            c = safe_add(c, oldc);
-	            d = safe_add(d, oldd);
-	        }
-	        return [a, b, c, d];
-	    }
-
-	    /*
-	    * Convert an array of little-endian words to a string
-	    */
-	    function binl2rstr(input) {
-	        var i,
-	            output = '';
-	        for (i = 0; i < input.length * 32; i += 8) {
-	            output += String.fromCharCode((input[i >> 5] >>> (i % 32)) & 0xFF);
-	        }
-	        return output;
-	    }
-
-	    /*
-	    * Convert a raw string to an array of little-endian words
-	    * Characters >255 have their high-byte silently ignored.
-	    */
-	    function rstr2binl(input) {
-	        var i,
-	            output = [];
-	        output[(input.length >> 2) - 1] = undefined;
-	        for (i = 0; i < output.length; i += 1) {
-	            output[i] = 0;
-	        }
-	        for (i = 0; i < input.length * 8; i += 8) {
-	            output[i >> 5] |= (input.charCodeAt(i / 8) & 0xFF) << (i % 32);
-	        }
-	        return output;
-	    }
-
-	    /*
-	    * Calculate the MD5 of a raw string
-	    */
-	    function rstr_md5(s) {
-	        return binl2rstr(binl_md5(rstr2binl(s), s.length * 8));
-	    }
-
-	    /*
-	    * Calculate the HMAC-MD5, of a key and some data (raw strings)
-	    */
-	    function rstr_hmac_md5(key, data) {
-	        var i,
-	            bkey = rstr2binl(key),
-	            ipad = [],
-	            opad = [],
-	            hash;
-	        ipad[15] = opad[15] = undefined;
-	        if (bkey.length > 16) {
-	            bkey = binl_md5(bkey, key.length * 8);
-	        }
-	        for (i = 0; i < 16; i += 1) {
-	            ipad[i] = bkey[i] ^ 0x36363636;
-	            opad[i] = bkey[i] ^ 0x5C5C5C5C;
-	        }
-	        hash = binl_md5(ipad.concat(rstr2binl(data)), 512 + data.length * 8);
-	        return binl2rstr(binl_md5(opad.concat(hash), 512 + 128));
-	    }
-
-	    /*
-	    * Convert a raw string to a hex string
-	    */
-	    function rstr2hex(input) {
-	        var hex_tab = '0123456789abcdef',
-	            output = '',
-	            x,
-	            i;
-	        for (i = 0; i < input.length; i += 1) {
-	            x = input.charCodeAt(i);
-	            output += hex_tab.charAt((x >>> 4) & 0x0F) +
-	                hex_tab.charAt(x & 0x0F);
-	        }
-	        return output;
-	    }
-
-	    /*
-	    * Encode a string as utf-8
-	    */
-	    function str2rstr_utf8(input) {
-	        return unescape(encodeURIComponent(input));
-	    }
-
-	    /*
-	    * Take string arguments and return either raw or hex encoded strings
-	    */
-	    function raw_md5(s) {
-	        return rstr_md5(str2rstr_utf8(s));
-	    }
-	    function hex_md5(s) {
-	        return rstr2hex(raw_md5(s));
-	    }
-	    function raw_hmac_md5(k, d) {
-	        return rstr_hmac_md5(str2rstr_utf8(k), str2rstr_utf8(d));
-	    }
-	    function hex_hmac_md5(k, d) {
-	        return rstr2hex(raw_hmac_md5(k, d));
-	    }
-
-	    function md5(string, key, raw) {
-	        if (!key) {
-	            if (!raw) {
-	                return hex_md5(string);
-	            }
-	            return raw_md5(string);
-	        }
-	        if (!raw) {
-	            return hex_hmac_md5(key, string);
-	        }
-	        return raw_hmac_md5(key, string);
-	    }
-
-	    if (true) {
-	        !(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
-	            return md5;
-	        }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	    } else {
-	        $.md5 = md5;
-	    }
-	}(this));
-
-
-/***/ },
-/* 52 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(53);
+	var content = __webpack_require__(57);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(18)(content, {});
@@ -37128,8 +37204,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../../../node_modules/css-loader/index.js!./../../../../../../../node_modules/less-loader/index.js!./tag.less", function() {
-				var newContent = require("!!./../../../../../../../node_modules/css-loader/index.js!./../../../../../../../node_modules/less-loader/index.js!./tag.less");
+			module.hot.accept("!!./../../../../../../node_modules/css-loader/index.js!./../../../../../../node_modules/less-loader/index.js!./style.less", function() {
+				var newContent = require("!!./../../../../../../node_modules/css-loader/index.js!./../../../../../../node_modules/less-loader/index.js!./style.less");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -37139,44 +37215,33 @@
 	}
 
 /***/ },
-/* 53 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(22)();
-	exports.push([module.id, ".tag {\n  float: left;\n  background: #E0E0E0;\n  padding: 3px 8px;\n  border-radius: 3px;\n  color: #777;\n  cursor: pointer;\n  font-size: 0.8em;\n  margin-right: 0.5em;\n}\n", ""]);
+	exports = module.exports = __webpack_require__(24)();
+	exports.push([module.id, ".break-letter {\n  word-break: break-all;\n}\n.pull-right {\n  float: right;\n}\n.pull-left {\n  float: left;\n}\n.footer .read-more {\n  display: block;\n  margin-top: 1px;\n  cursor: pointer;\n}\n.footer .read-more * {\n  display: inline-block;\n  vertical-align: middle;\n  height: 21px;\n  line-height: 21px;\n}\n.footer .read-more span {\n  float: left;\n  margin-right: 0.5em;\n}\n.footer .read-more i {\n  float: left;\n}\n", ""]);
 
 /***/ },
-/* 54 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
+	var React = __webpack_require__(3);
 
-	// load the styles
-	var content = __webpack_require__(55);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../../../../node_modules/css-loader/index.js!./../../../../../../../node_modules/less-loader/index.js!./style.less", function() {
-				var newContent = require("!!./../../../../../../../node_modules/css-loader/index.js!./../../../../../../../node_modules/less-loader/index.js!./style.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	module.exports = {
+	    componentDidMount: function() {
+	        var el = this.getDOMNode();
+	        
+	        el.addEventListener("click", function() { alert("blah"); });
+	    }
+	};
 
-/***/ },
-/* 55 */
-/***/ function(module, exports, __webpack_require__) {
+	var Tooltip = React.createClass({displayName: "Tooltip",
+	    render: function() {
+	        return React.createElement("div", {className: "tooltip"}, "blah");  
+	    }
+	});
 
-	exports = module.exports = __webpack_require__(22)();
-	exports.push([module.id, ".favourite i.fa {\n  float: right;\n  color: #a0a0a0;\n  cursor: pointer;\n  font-size: 1.375em;\n  padding: 5px;\n}\n.favourite i.fa-star {\n  color: #E8DE54;\n}\n", ""]);
+	React.render(React.createElement(Tooltip, null), document.body);
 
 /***/ }
 /******/ ]);
