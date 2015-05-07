@@ -6,10 +6,15 @@ module.exports = {
     componentDidMount: function() {
         var el = this.getDOMNode();
         
-        el.addEventListener("mouseEnter", this.mouseEnter);
+        el.addEventListener("mouseenter", this.mouseEnter);
+		el.addEventListener("mouseleave", this.mouseLeave);
     },
     
     mouseEnter: function() {
-        emitter.emit("tooltip-on", new TooltipData(1, 2, "the data"));
-    }
+        emitter.emit("tooltip-on", new TooltipData(this.getDOMNode(), this.tooltip()));
+    },
+	
+	mouseLeave: function() {
+		emitter.emit("tooltip-off");	
+	}
 };

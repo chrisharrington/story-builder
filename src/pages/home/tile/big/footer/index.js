@@ -14,13 +14,13 @@ module.exports = React.createClass({
 				<Tags story={story} />
 			</div>
 			<div className="pull-left spacing-left">
-				<IconLabel icon="fa-eye">{story.views}</IconLabel>
+				<IconLabel tooltip="Views" icon="fa-eye">{story.views}</IconLabel>
 			</div>
 			<div className="pull-left spacing-left">
-				<IconLabel icon="fa-star">{story.favourites}</IconLabel>
+				<IconLabel tooltip="Favourites" icon="fa-star">{story.favourites}</IconLabel>
 			</div>
             <div className="pull-left spacing-left">
-                <IconLabel icon="fa-files-o">{story.entries}</IconLabel>
+                <IconLabel tooltip="Entries" icon="fa-files-o">{story.entries}</IconLabel>
             </div>
             <a className="pull-right read-more">
                 <span>Read more</span>

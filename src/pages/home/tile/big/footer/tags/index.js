@@ -10,7 +10,7 @@ module.exports = React.createClass({
 	render: function() {
 		var tags = this.props.story.tags;
 		return <div className="pull-left">
-			<IconLabel icon="fa-tags">{tags.length}</IconLabel>
+			<IconLabel tooltip="Tags" icon="fa-tags">{tags.length}</IconLabel>
 		</div>;
 	}
 });

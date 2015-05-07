@@ -1,5 +1,4 @@
-module.exports = function(x, y, value) {
-    this.x = x;
-    this.y = y;
+module.exports = function(element, value) {
+	this.element = element;
     this.value = value;
 };
