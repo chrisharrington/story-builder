@@ -4,17 +4,16 @@ var React = require("react"),
 	DefaultRoute = Router.DefaultRoute,
 	
 	Base = require("./pages/base"),
-	Home = require("./pages/home");
-
-require("style/variables.less");
-require("style/mixins.less");
+	Home = require("./pages/home"),
+	Story = require("./pages/story");
 
 var routes = (
 	<Route handler={Base} path="/">
 		<DefaultRoute handler={Home} />
+		<Route name="story" path="story/:slug" handler={Story} />
 	</Route>
 );
 
-Router.run(routes, function(Handler) {
-	React.render(<Handler />, document.body);
+Router.run(routes, function(Handler, state) {
+	React.render(<Handler params={state.params} />, document.body);
 });

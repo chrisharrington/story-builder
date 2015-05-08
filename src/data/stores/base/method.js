@@ -1,5 +1,6 @@
 var config = require("../../../config"),
     react = require("react"),
+	_ = require("lodash"),
     qwest = require("qwest");
 
 module.exports = function(verb, collection) {
@@ -8,6 +9,8 @@ module.exports = function(verb, collection) {
 	this.execute = function(params) {
         var url = "fixtures/" + collection + ".json";
 		return qwest[verb](url, params).then(function(response) {
+			if (params)
+				response = _.where(response, params);
 			_result = response;
 			_notify();
 		});

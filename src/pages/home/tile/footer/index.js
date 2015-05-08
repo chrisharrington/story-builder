@@ -4,13 +4,14 @@ var React = require("react"),
 	Tags = require("./tags"),
 	IconLabel = require("./icon-label"),
 	
+	getSlug = require("speakingurl"),
 	emitter = require("emitter");
 
 require("./style.less");
 
 module.exports = React.createClass({
 	readMore: function() {
-		emitter.emit("read-more", this.props.story);
+		window.location.hash = "/story/" + getSlug(this.props.story.title);
 	},
 	
 	render: function() {
