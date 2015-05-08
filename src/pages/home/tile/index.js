@@ -10,7 +10,7 @@ require("./style.less");
 module.exports = React.createClass({
 	render: function() {
 		var story = this.props.story;
-		return <div className="eight columns">
+		return <div className="six columns">
 			<div className="tile">
 				<Header story={story} />
 				<Blurb story={story} />
