@@ -7,7 +7,7 @@ var React = require("react"),
 
 module.exports = React.createClass({
 	render: function() {
-		return <div className="row spacing-top">
+		return <div className="row">
 			{_.map(this.props.stories, function(story) {
 				return <Tile story={story} />;
 			})}

@@ -29,7 +29,7 @@ module.exports = React.createClass({
     },
 	
 	render: function() {
-		return <div className="container spacing-top">
+		return <div className="container">
 			<BigRow stories={_.take(this.state.stories, 2)} />
 		</div>;
 	}

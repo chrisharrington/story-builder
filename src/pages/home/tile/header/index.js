@@ -12,7 +12,7 @@ module.exports = React.createClass({
 		var story = this.props.story;
 		return <div className="header">
 			<div className="image-container">
-				<Gravatar email={story.authour.email} size={52} />
+				<Gravatar email={story.authour.email} size={60} />
 			</div>
 			<div className="pull-left">
 				<Title story={story} />
