@@ -4,6 +4,7 @@ var React = require("react"),
 	_ = require("lodash"),
 	
 	BigRow = require("./big-row"),
+	MediumRow = require("./medium-row"),
 	
 	Stories = require("../../data/stores/stories");
 
@@ -12,7 +13,7 @@ require("./style.less");
 module.exports = React.createClass({
 	getInitialState: function() {
 		return {
-			stories: []	
+			stories: []
 		};
 	},
 	
@@ -29,8 +30,9 @@ module.exports = React.createClass({
     },
 	
 	render: function() {
-		return <div className="container">
+		return <div className="container spacing-top">
 			<BigRow stories={_.take(this.state.stories, 2)} />
+			<MediumRow stories={_.slice(this.state.stories, 2, 5)} />
 		</div>;
 	}
 });
